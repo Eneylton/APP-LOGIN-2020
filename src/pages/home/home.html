@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <ion-card *ngFor="let usu of usuarios">
+    
+    <ion-card-content>
+      <ion-card-title>
+        {{usu.nome}}
+        </ion-card-title>
+      <p>
+       <button ion-button (click)="openConta()">Minha Conta</button>
+      </p>
+      <p>
+        <button ion-button (click)="logout()">Logout</button>
+       </p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
